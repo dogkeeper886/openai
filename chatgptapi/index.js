@@ -5,6 +5,8 @@ const express = require('express');
 
 const app = express();
 const port = 8080; // Specify the desired port number
+app.use(express.json()); // Middleware to parse JSON bodies
+
 
 // Configure OpenAI API
 const configuration = new Configuration({
@@ -12,29 +14,31 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-// Define a POST route for chat messages
-app.post('/chat', async (req, res) => {
-    const { message } = req.body;
+async function runChat(userInput) {
+    console.log("userInput:", userInput)
 
     // Send chat message to OpenAI API for completion
     const completion = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
         max_tokens: 1024,
-        messages: [message],
+        messages: [{ role: "user", content: userInput }],
     }); //message object example { role: "user", content: "Hello world" }
 
     // Extract the response from completion and send it back
-    const reply = completion.choices[0].text.trim();
-    res.json({ reply });
+    const reply = await completion.data.choices[0].message.content;
+    console.log("chatReply:", await reply)
+    return await reply
+}
+
+// Define a POST route for chat messages
+app.post('/chat', async (req, res) => {
+    const { userInput } = req.body;
+    const chatReply = await runChat(userInput);
+    res.json({ chatReply });
 });
 
 // Serve static files (HTML, CSS, JS) from a public folder
 app.use(express.static('public'));
-
-// Define a catch-all route for frontend
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
 // Start the Server
 app.listen(port, () => {
