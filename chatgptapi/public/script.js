@@ -5,11 +5,11 @@ const chatBody = document.getElementById('chat-body');
 
 // Function to add a chat message to the UI
 function addMessage(message, sender) {
-    const messageElement = document.createElement('div');
+    const messageElement = document.createElement('pre');
     messageElement.classList.add('message', sender);
     messageElement.textContent = message;
     chatBody.appendChild(messageElement);
-    chatBody.scrollTop = chatBody.scrollHeight;
+    //chatBody.scrollTop = chatBody.scrollHeight;
 }
 
 // Function to handle user input
@@ -73,3 +73,9 @@ userInput.addEventListener('keydown', (event) => {
         handleUserInput();
     }
 });
+
+// Event listener for page has finished loading and all the content is ready to be manipulated.
+document.addEventListener('DOMContentLoaded', function () {
+    // scroll down to the bottom of the page
+    window.scrollTo(0, document.body.scrollHeight);
+})

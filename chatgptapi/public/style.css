@@ -1,5 +1,5 @@
 :root {
-    --content-width: 400px;
+    --content-width: 800px;
 }
 
 * {
@@ -20,27 +20,28 @@ html {
     text-align: center;
 }
 
-nav {
+.chat-input {
+    /*
+    max-width: var(--content-width);
+    margin: auto;
+    */
     position: sticky;
     top: 0;
 }
 
-.chat-input {
+.chat-container {
     max-width: var(--content-width);
     margin: auto;
 }
 
-.chat-container {
-    max-width: var(--content-width);
-    margin: 20px auto;
+.chat-body {
+    margin-top: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.chat-body {
     padding: 10px;
     min-height: 200px;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .chat-input {
@@ -67,10 +68,15 @@ nav {
     cursor: pointer;
 }
 
-div.message {
-    margin: 0.3rem;
+pre {
+    white-space: pre-wrap;
 }
 
-div.message.chatbot {
+.message {
+    margin: 0.3rem;
+    font-family: Arial, sans-serif;
+}
+
+.message.chatbot {
     margin-bottom: 0.5rem;
 }
