@@ -4,7 +4,7 @@ const sendBtn = document.getElementById('send-btn');
 const chatBody = document.getElementById('chat-body');
 
 // Function to add a chat message to the UI
-async function addMessage(message, sender) {
+function addMessage(message, sender) {
     const messageElement = document.createElement('div');
     messageElement.classList.add('message', sender);
     messageElement.textContent = message;
@@ -23,7 +23,7 @@ async function handleUserInput() {
     const reply = await processUserMessage(message);
 
     // Display chatbot's reply
-    addMessage(reply.chatReply, 'chatbot');
+    addMessage(reply, 'chatbot');
 
     // Clear the input field
     userInput.value = '';
@@ -31,41 +31,31 @@ async function handleUserInput() {
 
 // Function to process user message (dummy logic, replace with your own)
 async function processUserMessage(message) {
-    async function performPost() {
+    try {
         const url = '/chat'; // Replace with your API endpoint
 
         // Data to send in the POST request
         const data = {
             userInput: message
         };
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
 
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
+        const result = await response.json(); // Process the response data here
+        console.log('Response:\n', JSON.stringify(result, null, 4));      
 
-            const responseData = await response.json();
-            console.log('Response:', responseData);
-
-            // Process the response data here
-
-            return responseData; // Return the response data
-        } catch (error) {
-            console.error('Error:', error);
-            // Handle any errors here
-            throw error; // Throw the error to be caught by the caller
-        }
+        // Dummy logic: Echo the user's message
+        return result.content;
+    } catch (error) {
+        console.error('Error:', error);
+        // Handle any errors here
+        throw error; // Throw the error to be caught by the caller
     }
-
-    const chatResult = await performPost(message);
-
-
-    // Dummy logic: Echo the user's message
-    return `Chatbot: ${await chatResult.chatReply}`;
 }
 
 // Event listener for send button click

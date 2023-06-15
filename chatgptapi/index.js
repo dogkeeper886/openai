@@ -15,26 +15,44 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 async function runChat(userInput) {
-    console.log("userInput:", userInput)
+    try {
+        console.log("userInput:", userInput);
 
-    // Send chat message to OpenAI API for completion
-    const completion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        max_tokens: 1024,
-        messages: [{ role: "user", content: userInput }],
-    }); //message object example { role: "user", content: "Hello world" }
+        // Send chat message to OpenAI API for completion
+        const completion = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            max_tokens: 1024,
+            messages: [{ role: "user", content: userInput }],
+        }); //message object example { role: "user", content: "Hello world" }
 
-    // Extract the response from completion and send it back
-    const reply = await completion.data.choices[0].message.content;
-    console.log("chatReply:", await reply)
-    return await reply
+        console.log("chatReply:\n", JSON.stringify(completion.data.choices[0], null, 4));
+        // Extract the response from completion and send it back
+        const result = {
+            content: completion.data.choices[0].message.content,
+            finish_reason: completion.data.choices[0].finish_reason
+        };
+
+        return result;
+
+    } catch (error) {
+        config.log('Error:', error);
+        throw error; // Throw the error to be caught by the caller
+    }
 }
 
 // Define a POST route for chat messages
 app.post('/chat', async (req, res) => {
-    const { userInput } = req.body;
-    const chatReply = await runChat(userInput);
-    res.json({ chatReply });
+    try {
+        const { userInput } = req.body;
+        // Perform asynchronous operations or fetch data here
+        const result = await runChat(userInput); // Replace with your actual asynchronous operation
+
+        // Once the result is available, send it as the response
+        res.json(result);
+    } catch (error) {
+        // Handle any errors that occurred during the asynchronous operations
+        res.status(500).json({ error: 'An error occurred' });
+    }
 });
 
 // Serve static files (HTML, CSS, JS) from a public folder
