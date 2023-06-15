@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prism.css">
+    <title>Result</title>
+</head>
+
+<body>
+    <p>Sure! Here's an example of using `fetch` with `async` and `await` in JavaScript:</p>
+    <br>
+    <pre><code class="language-js">
+const url = 'https://example.com/api/some-endpoint';
+const data = { username: 'example' };
+
+async function postData(url = '', data = {}) {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+  return response.json(); 
+}
+
+postData(url, data)
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+</code></pre>
+    <br>
+    <p>In this example, `postData` is an asynchronous function that uses `await` to wait for a response object to be
+        returned by the API. The `then` function is then called with the JSON data returned by the function, which is
+        logged to the console using `console.log`. Any errors that occur during the fetch request or data conversion are
+        caught and logged to the console using `console.error`.</p>
+    <script src="prism.js"></script>
+</body>
+
+</html>

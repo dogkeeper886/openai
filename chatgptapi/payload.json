@@ -1,0 +1,20 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "First, You will be provided entire response with html element.\nSecond, You will be provided example code nested in <code class=\"language-LANG\"></code> tags."
+        },
+        {
+            "role": "user",
+            "content": "Can you give me a example of using fetch to post in js"
+        },
+        {
+            "role": "assistant",
+            "content": "<p>Sure, here's an example of using the `fetch` API in JavaScript to make a POST request:</p>\n<br>\n<pre><code class=\"language-js\">\nconst url = 'https://example.com/api/some-endpoint';\nconst data = { username: 'example' };\n\nfetch(url, {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify(data)\n})\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n</code></pre>\n<br>\n<p>In this example, `fetch` is used to make a POST request to `https://example.com/api/some-endpoint` with the payload `{ username: 'example' }`. The request headers specify that the request payload is JSON using the `Content-Type` header. The `then` function is called with the response object returned by the API, which is then converted to JSON using the `json` method. The resulting JSON data is logged to the console using `console.log`. Any errors that occur during the fetch request or data conversion are caught and logged to the console using `console.error`.</p>"
+        },
+        {
+            "role": "user",
+            "content": "Can you give a example of using fetch with async and await"
+        }
+    ]
+}
