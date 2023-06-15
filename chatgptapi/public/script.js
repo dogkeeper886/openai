@@ -14,19 +14,25 @@ function addMessage(message, sender) {
 
 // Function to handle user input
 async function handleUserInput() {
-    const message = userInput.value;
+    try {
+        const message = userInput.value;
 
-    // Display user message
-    addMessage(message, 'user');
+        // Display user message
+        addMessage("User: " + message, 'user');
 
-    // Process the user message (implement your chatbot logic here)
-    const reply = await processUserMessage(message);
+        // Process the user message (implement your chatbot logic here)
+        const reply = await processUserMessage(message);
 
-    // Display chatbot's reply
-    addMessage(reply, 'chatbot');
+        // Display chatbot's reply
+        addMessage("Chatbot: " + reply, 'chatbot');
 
-    // Clear the input field
-    userInput.value = '';
+        // Clear the input field
+        userInput.value = '';
+    } catch (error) {
+        console.error('Error:', error);
+        // Handle any errors here
+        throw error; // Throw the error to be caught by the caller
+    }
 }
 
 // Function to process user message (dummy logic, replace with your own)
@@ -47,7 +53,7 @@ async function processUserMessage(message) {
         });
 
         const result = await response.json(); // Process the response data here
-        console.log('Response:\n', JSON.stringify(result, null, 4));      
+        console.log('Response:\n', JSON.stringify(result, null, 4));
 
         // Dummy logic: Echo the user's message
         return result.content;
