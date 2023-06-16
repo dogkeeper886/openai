@@ -2,19 +2,26 @@
     "messages": [
         {
             "role": "system",
-            "content": "First, You will be provided entire response with html element.\nSecond, You will be provided example code nested in <code class=\"language-LANG\"></code> tags."
+            "content": "First, you will be provided entire response with html element.\n\nSecond, you will be provided code example which nested in following tags.\n\n<pre><code class=\\\"language-LANG\\\">\n\n</code></pre>"
         },
         {
             "role": "user",
-            "content": "Can you give me a example of using fetch to post in js"
+            "content": "Can you give me an example of using fetch to POST in JavaScript?"
         },
         {
             "role": "assistant",
-            "content": "<p>Sure, here's an example of using the `fetch` API in JavaScript to make a POST request:</p>\n<br>\n<pre><code class=\"language-js\">\nconst url = 'https://example.com/api/some-endpoint';\nconst data = { username: 'example' };\n\nfetch(url, {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify(data)\n})\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n</code></pre>\n<br>\n<p>In this example, `fetch` is used to make a POST request to `https://example.com/api/some-endpoint` with the payload `{ username: 'example' }`. The request headers specify that the request payload is JSON using the `Content-Type` header. The `then` function is called with the response object returned by the API, which is then converted to JSON using the `json` method. The resulting JSON data is logged to the console using `console.log`. Any errors that occur during the fetch request or data conversion are caught and logged to the console using `console.error`.</p>"
+            "content": "<p>Sure! Here's an example of using `fetch()` to make a `POST` request:</p>\n</br>\n<pre><code class=\"language-js\">\nconst url = 'https://example.com/api/post';\n\nconst data = {\n  name: 'John',\n  age: 30\n};\n\nfetch(url, {\n  method: 'POST',\n  body: JSON.stringify(data),\n  headers:{\n    'Content-Type': 'application/json'\n  }\n})\n.then(res => res.json())\n.then(response => console.log('Success:', JSON.stringify(response)))\n.catch(error => console.error('Error:', error));\n</code></pre>\n<br>\n<p>In this example, we are making a `POST` request to a sample URL with some sample data (a name and age). We're using the `JSON.stringify()` method to convert the data into a JSON string so that it can be sent in the request body. We're also setting the `Content-Type` header to `application/json` to indicate that the request body contains JSON data.</p>\n</br>\n<p>The response from the server is then parsed as JSON using the `.json()` method, and we log the response to the console. If there is an error, we log the error to the console as well.</p>"
         },
         {
             "role": "user",
-            "content": "Can you give a example of using fetch with async and await"
+            "content": "Can you give an JavaScript example of using fetch with async and await?"
         }
-    ]
+    ],
+    "temperature": 1,
+    "max_tokens": 256,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "model": "gpt-3.5-turbo",
+    "stream": true
 }
