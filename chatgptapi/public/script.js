@@ -12,6 +12,12 @@ function addMessage(message, sender) {
     //chatBody.scrollTop = chatBody.scrollHeight;
 }
 
+function htmlToElement(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.cloneNode(true);
+}
+
 // Function to handle user input
 async function handleUserInput() {
     try {
@@ -24,8 +30,9 @@ async function handleUserInput() {
         const reply = await processUserMessage(message);
 
         // Display chatbot's reply
-        addMessage("Chatbot: " + reply, 'chatbot');
-
+        //addMessage("Chatbot: " + reply, 'chatbot');
+        const fragment = htmlToElement(reply);
+        chatBody.appendChild(fragment);
         // Clear the input field
         userInput.value = '';
     } catch (error) {

@@ -13,7 +13,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-// Prepare messges object
+// Prepare chat default messges object
 let chatRequestMessages = [
     {
         "role": "system",
@@ -33,11 +33,19 @@ async function runChat(userInput) {
     try {
         console.log("userInput:", userInput);
 
+        // Poviding General Instructions
+        function providingGeneralInstructions(content) {
+            const newItem = { role: "user", content: content };
+            return chatRequestMessages.concat(newItem);
+        }
+        const completeMessage = providingGeneralInstructions(userInput);
+        console.log("chatRequestMessages:\n", JSON.stringify(completeMessage, null, 4))
+
         // Send chat message to OpenAI API for completion
         const completion = await openai.createChatCompletion({
             model: "gpt-3.5-turbo",
             max_tokens: 1024,
-            messages: [{ role: "user", content: userInput }],
+            messages: completeMessage,
         }); //message object example { role: "user", content: "Hello world" }
 
         console.log("chatReply:\n", JSON.stringify(completion.data.choices[0], null, 4));
