@@ -1,0 +1,7 @@
+Viewing Wi-Fi Clients
+From the Clients page, you can view Wi-Fi clients that are associated with your managed devices.
+
+Complete the following steps to view the Wi-Fi clients.
+From the navigation bar, click Clients to expand the menu.
+Click Wireless Clients List.
+By default, the Clients tab is selected. The Wi-Fi > Clients page displays the wireless clients that are currently associated with your managed APs and their details, including:
