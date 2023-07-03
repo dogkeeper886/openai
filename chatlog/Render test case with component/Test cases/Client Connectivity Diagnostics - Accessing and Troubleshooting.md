@@ -1,4 +1,4 @@
-Test Case: Client Connectivity Diagnostics
+Test Case: Client Connectivity Diagnostics - Accessing and Troubleshooting
 
 Test Steps:
 1. Open the WEB GUI and navigate to the Client Connectivity Diagnostics tool.

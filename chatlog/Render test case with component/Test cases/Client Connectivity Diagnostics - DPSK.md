@@ -1,46 +1,68 @@
 Test Case: Client Connectivity Diagnostics - WPA2 Enterprise
 
 Summary:
-This test case focuses on verifying the functionality of the Client Connectivity Diagnostics tool, which is used to troubleshoot connectivity issues between a wireless client device and an access point (AP) in a WPA2-PSK network.
+This test case focuses on verifying the functionality of the Client Connectivity Diagnostics tool, which is used to troubleshoot connectivity issues between a wireless client device and an access point (AP) in a DPSK network.
 
 Requirements:
 1. Have an AP to venue.
 2. A wireless client to connect to WLAN.
 
 Preconditions:
-1. Creating a WPA2-PSK network.
+1. Creating a DPSK network.
 
-Here's a step-by-step guide to creating a WPA2-PSK network:
+Here's a step-by-step guide to creating a DPSK WLAN network:
 
-1. On the navigation bar, click Wi-Fi > Wi-Fi Networks > Wi-Fi Networks List.
-2. The Networks page will be displayed.
-3. Click "Add Wi-Fi Network" or select a PSK network setting to clone from the table.
-4. The Create New Network page will be displayed.
-5. In the Network Details tab, complete the following settings:
+1. On the navigation bar, click on "Wi-Fi" and then "Wi-Fi Networks" followed by "Wi-Fi Networks List". This will take you to the Networks page.
+
+2. Click on "Add Wi-Fi Network" or select a DPSK network setting that you want to copy and click on "Clone" at the top of the table. This will open the Create New Network page.
+
+3. In the Network Details page, complete the following settings:
    - Network Name: Enter a name (up to 32 characters) for the network.
-   - Set different SSID: Choose this option if you want to configure a different SSID from the network name.
-   - Description: Enter a description (up to 64 characters) to identify the network.
-   - Network Type: Select "Pre-Shared Key (PSK)".
-6. Click "Next".
-7. The PSK Settings tab will be displayed.
-8. Complete the settings on the PSK Settings tab:
-   - Passphrase: Enter a minimum eight-character passphrase for users to access the network.
-   - Security Protocol: Select "WPA2" as the security protocol (unless you have a specific reason to choose otherwise).
-   - Management Frame Protection (802.11w): Choose "Disabled," "Optional," or "Required".
-   - MAC Authentication: Toggle the switch to ON if you want to enable this feature and configure MAC registration.
-9. Click "Show more settings" to expand the options.
-10. Configure additional settings as needed:
-    - VLAN settings: Specify the VLAN ID or enable VLAN pooling.
-    - Proxy ARP: Toggle the switch to ON if you want to enable proxy ARP.
-    - Services settings: Enable or configure DNS Proxy, Wi-Fi Calling, Client Isolation, Anti-spoofing, etc.
-    - Radio settings: Configure options like Load Control, Access Control, OFDM, Data Rate Control, etc.
-    - Optimized Connectivity Experience (OCE): Set the switch to ON and configure relevant parameters.
-    - Venues: Select the venues where you want to activate the network.
-11. Click "Next".
-12. Review the Venues page and make necessary selections for venue activation, AP groups, radio bands, and scheduling.
-13. Click "Apply".
-14. On the Summary page, review the configured settings, and click the eye icon to display the passphrase in plain text if desired.
-15. Finally, click "Finish" to complete the creation of the WPA2-PSK network.
+   - Set different SSID: Optionally configure a different SSID from the network name.
+   - Description: Enter a description (up to 64 characters) to help identify the network.
+   - Network Type: Select "Dynamic Pre-Shared Key (DPSK)". This will display a structure diagram of a DPSK network.
+
+4. Click "Next" to proceed to the DPSK Settings page.
+
+5. In the DPSK Settings page, complete the following settings:
+   - Security Protocol: Select "WPA" or "WPA2(recommended)" from the drop-down list.
+   - Use the DPSK Service: Enable this option and select an existing DPSK service from the drop-down list, or click "Add DPSK Service" to configure a new one.
+   - Use the RADIUS Server: Enable this option and configure the RADIUS Server by selecting an existing server from the drop-down list or clicking "Add Server" to create a new one.
+
+6. Click "Show more settings" to expand additional options.
+
+7. Complete the VLAN settings:
+   - VLAN ID: Enter the VLAN ID number (default is 1) for the network.
+   - VLAN Pooling: Toggle the switch to ON if you want to enable VLAN pooling.
+   - Select VLAN Pooling: Select a VLAN pool from the drop-down list or click "Add Pool" to create a new VLAN pool.
+
+8. Complete the services settings:
+   - DNS Proxy: Toggle the switch to ON to enable the DNS proxy. Select an existing DNS proxy from the table or click "Add Rule" to create a new one.
+   - Wi-Fi Calling: Toggle the switch to ON to enable Wi-Fi Calling. Click "Select Profiles" to configure the Wi-Fi Calling profiles.
+   - Client Isolation: Toggle the switch to ON to enable client isolation. Configure the isolation packets and other relevant settings.
+
+9. Complete the radio settings:
+   - Hide SSID: Select this feature to hide the SSID.
+   - Load Control: Configure the maximum rate, max clients per radio, and load balancing options.
+
+10. Complete the access control settings:
+   - Access Control: Choose from available options to configure Layer 2, Layer 3, Device & OS, Applications, and Client Rate Limit.
+
+11. Enable or configure other optional features like OFDM only, Data Rate Control, Optimized Connectivity Experience (OCE), etc.
+
+12. Click "Next" to proceed to the Venues page.
+
+13. In the Venues page, select the venues in which you want to activate the network. You can activate the network in all venues or specific ones by setting the switch to ON.
+
+14. Optionally, select specific AP groups and modify the radio band for the network.
+
+15. Configure the scheduling for the network. You can choose a 24/7 schedule or customize it according to your requirements.
+
+16. Click "Apply" to save the settings.
+
+17. Review the settings on the Summary page and make sure everything is configured correctly.
+
+18. Finally, click "Finish" to create the DPSK-protected network.
 
 Test Steps:
 1. Open the WEB GUI and navigate to the Client Connectivity Diagnostics tool.
