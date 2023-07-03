@@ -1,0 +1,15 @@
+Creating Wireless Networks Overview
+Before you can offer wireless services in your venue, you must create at least one wireless network. The procedure for creating a network depends on the type of wireless network that you want to create and the authentication method that you want users to use to join the network.
+
+.
+RUCKUS One supports the following authentication methods:
+Pre-Shared Key: Requires users to enter the passphrase (that you have defined for the network) to connect to RUKCUS One. Refer to Creating a Network That Uses a Pre-Shared Key.
+Enterprise AAA: Uses the 802.1X standard and WPA2 security protocols to authenticate users using an authentication server on the network. This authentication method requires an AAA server on the network. Refer to Creating a Network That Uses an Enterprise AAA Server.
+Captive Portal: Uses a third-party captive portal and authentication service to authenticate users. There are six methods that can be used to gain access through the captive portal:
+Click-Through: Allows users to accept terms and conditions to access the network. Refer to Creating a Network That Uses a Captive Portal with Click-Through.
+Self Sign In: Allows users to access the network temporarily using a social media account, or register their details and get a personal password. Refer to Creating a Network That Uses a Captive Portal with Self Sign In.
+Cloudpath Captive Portal: Users connect through an enhanced captive portal experience with Cloudpath. Refer to Creating a Network That Uses a Cloudpath Captive Portal.
+Host Approval: Allows users to register their details in the portal including their host email. A host must approve the guest request to provide the temporary network credentials to the guest user. Refer to Creating a Network That Uses a Captive Portal with Host Approval.
+Guest Pass: Allows users to access the network temporarily using a personal password which they receive in advance from the network administration staff. Refer to Creating a Network That Uses a Captive Portal with a Guest Pass.
+Third-Party Captive Portal (WISPr): Allows users to access the network through a third-party captive portal, authenticated by a RADIUS server. Refer to Creating a Network That Uses a Third-Party Captive Portal (WISPr Feature).
+Open (not recommended): Allows users to access the network without any authentication. Refer to Creating an Open Network (No Authentication).

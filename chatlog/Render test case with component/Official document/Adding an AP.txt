@@ -1,0 +1,22 @@
+Adding an AP
+You can manually add APs to your RUCKUS One account. Alternatively, use the RUCKUS One Mobile App to scan the QR code of the RUCKUS AP and add them to your RUKCUS One account.
+
+Complete the following steps to add an AP to your RUCKUS One account.
+Connect the AP that you want to add to a network that is connected to the Internet, and plug it into a power source to power it on.
+On the navigation bar, click Wi-Fi > Access Points > Access Point List. Alternatively, from the RUCKUS One Dashboard, click Add > Device > Wi-Fi AP and skip to Step 5.
+The Wi-Fi page is displayed.
+Wi-Fi Devices
+
+On the upper-right corner of the page, click Add and from the drop-down menu, select AP to add an AP, or click Import from a file to add APs in bulk.
+The Add AP page is displayed.
+Adding an AP
+
+Complete the following fields to add an AP:
+Venue: Select the venue from the drop-down to which you want to deploy this AP.
+AP Group: Select an AP Group from the drop-down to which you want to add this AP.
+AP Name: Type a name for the AP. We recommend that you use the AP model number or another name that helps you identify this AP.
+Serial Number: Type the 12-digit serial number of the AP.
+Description: (Optional) Add a brief description of the AP.
+GPS coordinates: (Optional) Add GPS coordinates for the AP.
+Click Add.
+After the addition of the AP, the page refreshes and displays the newly added AP in the Wi-Fi page. Initially, the Status column shows Never Contacted Cloud. However, after the update, it takes up to 5 minutes for the status changes to Connected or Operational, depending on the existing configuration.
