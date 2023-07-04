@@ -1,0 +1,43 @@
+Here's a step-by-step guide for creating a network that uses a captive portal with click-through:
+
+1. Navigate to the Wi-Fi section in the navigation bar and select "Wi-Fi Networks" and then "Wi-Fi Networks List."
+2. On the Networks page, click "Add Wi-Fi Network" to create a new network or select a Captive Portal with Click-Through network setting to clone.
+3. Complete the Network Details page:
+   - Enter a Network Name (up to 32 characters).
+   - Optionally, set a different SSID.
+   - Enter a Description (up to 64 characters).
+   - Select "Captive Portal" as the Network Type.
+4. Click "Next" to proceed to the Portal Type page.
+5. On the Portal Type page, select "Click-Through" as the option. This requires users to accept the Terms and Conditions to access the network.
+6. Click "Next" to move to the Onboarding page.
+7. Select the "Redirect Users" checkbox and enter a valid URL to which users will be redirected after successful login.
+8. Optionally, select the "Enable RUCKUS DHCP service" checkbox to automatically create and assign a new DHCP-Guest Service and DHCP Pool for venues without specified DHCP service.
+9. Click "Show more settings" to expand the VLAN settings.
+10. Complete the VLAN settings:
+   - Enter a VLAN ID number (default is 1).
+   - Optionally, enable VLAN Pooling and select a VLAN pool from the dropdown list or create a new VLAN pool.
+   - Toggle the Proxy ARP switch to ON if you want to enable proxy ARP.
+11. Complete the services settings:
+   - Toggle the DNS Proxy switch to ON if you want to enable the DNS proxy. You can select an existing DNS proxy or add a new one.
+   - Toggle the Wi-Fi Calling switch to ON if you want to enable Wi-Fi Calling. Select the desired Wi-Fi Calling profiles.
+   - Toggle the Client Isolation switch to ON if you want to enable client isolation. Configure the client isolation settings.
+   - Toggle the Anti-spoofing switch to ON if you want to enable anti-spoofing. Configure the anti-spoofing settings.
+12. Complete the radio settings:
+   - Configure the desired settings for Hide SSID, Load Control, and Access Control.
+13. Optionally, configure Data Rate Control, 802.11k neighbor reports, Client Inactive Timeout, Directed MC/BC Threshold, Airtime Decongestion, Transient Client Management, and Optimized Connectivity Experience.
+14. Complete the User Connection settings:
+   - Specify the duration for which users are allowed to stay connected.
+   - Optionally, set a grace period for clients to reconnect without going through authentication.
+15. Click "Next" to proceed to the Portal Web Page settings.
+16. Complete the Portal Web Page settings:
+   - Select a Guest Portal from the dropdown list or create a new one.
+17. Click "Next" to move to the Venues page.
+18. Configure the venues in which you want to activate this network:
+   - Select the desired venues or choose to activate the network in all venues.
+   - Optionally, select specific AP groups and configure VLAN and Radio Band settings.
+   - Configure scheduling if needed.
+19. Click "Apply" to save the network configuration.
+20. Review the settings on the Summary page.
+21. Click "Finish" to complete the process.
+
+Please note that some steps may have additional options and settings depending on your specific network configuration requirements.

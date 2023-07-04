@@ -1,0 +1,9 @@
+Captive Portal:
+1. Uses a third-party captive portal and authentication service to authenticate users.
+2. There are six methods that can be used to gain access through the captive portal:
+    a. Click-Through: Allows users to accept terms and conditions to access the network.
+    b. Self Sign In: Allows users to access the network temporarily using a social media account, or register their details and get a personal password. Refer to Creating a Network That Uses a Captive Portal with Self Sign In.
+    c. Cloudpath Captive Portal: Users connect through an enhanced captive portal experience with Cloudpath. Refer to Creating a Network That Uses a Cloudpath Captive Portal.
+    d. Host Approval: Allows users to register their details in the portal including their host email. A host must approve the guest request to provide the temporary network credentials to the guest user. Refer to Creating a Network That Uses a Captive Portal with Host Approval.
+    e. Guest Pass: Allows users to access the network temporarily using a personal password which they receive in advance from the network administration staff. Refer to Creating a Network That Uses a Captive Portal with a Guest Pass.
+    f. Third-Party Captive Portal (WISPr): Allows users to access the network through a third-party captive portal, authenticated by a RADIUS server. Refer to Creating a Network That Uses a Third-Party Captive Portal (WISPr Feature).
