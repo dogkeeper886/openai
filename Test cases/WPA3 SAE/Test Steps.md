@@ -1,11 +1,3 @@
-Use the test case delimited by triple quotes to create a new test case focus on Diagnosis Start and Stop. 
-a. Test start button functionality for diagnosis initiation
-b. Validate the ability to stop diagnosis at any time
-c. Confirm that stopping diagnosis ceases monitoring but retains the UI.
-
-"""
-Test Case: Client Connectivity Diagnostics - Accessing and Troubleshooting
-
 Test Steps:
 1. Open the WEB GUI and navigate to the Client Connectivity Diagnostics tool.
 2. Follow the provided steps to access the tool:
@@ -39,15 +31,14 @@ Test Steps:
 14. Complete the troubleshooting process and verify that the tool provides relevant and accurate information for diagnosing and troubleshooting connectivity issues with client devices.
 
 Expected Results:
-- The Client Connectivity Diagnostics tool is accessible through the provided steps.
-- The Diagnostics tab is displayed with the expected input fields.
-- Entering a valid MAC address and selecting an AP successfully initiates the connectivity trace.
-- The displayed items (AP MAC, AP Name, SSID, Radio, Failure Type) are correct and relevant.
-- The flow diagram accurately represents the different stages of the AP-client connection.
-- Colored arrows indicate warnings (yellow) or failures (red) during the connection process.
-- The tool analyzes frames and accurately identifies the specific stage causing the connection problems.
-- Information about the APs involved in the connection attempt is displayed correctly.
-- The client's status during the connection process is accurately represented.
-- Warnings and failures are appropriately highlighted in the flow diagram.
-- The tool provides relevant and accurate information for diagnosing and troubleshooting connectivity issues with client devices.
-"""
+The Client Connectivity Diagnostics tool is accessible through the provided steps.
+The Diagnostics tab is displayed with the expected input fields.
+Entering a valid MAC address and selecting an AP successfully initiates the connectivity trace.
+The displayed items (AP MAC, AP Name, SSID, Radio, Failure Type) are correct and relevant.
+The flow diagram accurately represents the different stages of the AP-client connection.
+Colored arrows indicate warnings (yellow) or failures (red) during the connection process.
+The tool analyzes frames and accurately identifies the specific stage causing the connection problems.
+Information about the APs involved in the connection attempt is displayed correctly.
+The client's status during the connection process is accurately represented.
+Warnings and failures are appropriately highlighted in the flow diagram.
+The tool provides relevant and accurate information for diagnosing and troubleshooting connectivity issues with client devices.
