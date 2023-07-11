@@ -1,4 +1,4 @@
-Here are the step-by-step instructions to create a WPA2 Enterprise network using an enterprise AAA server:
+Here are the step-by-step instructions to create a WPA3 Enterprise network:
 
 1. On the navigation bar, click Wi-Fi > Wi-Fi Networks > Wi-Fi Networks List.
 2. The Networks page will be displayed. Click "Add Wi-Fi Network".
@@ -9,7 +9,7 @@ Here are the step-by-step instructions to create a WPA2 Enterprise network using
    - Click "Next" to proceed.
 5. The "Enterprise AAA (802.1X) Settings" page will be displayed.
 6. Complete the settings on the Enterprise AAA (802.1X) Settings page:
-   - Select the desired Security Protocol (WPA or WPA2 recommended) from the drop-down list.
+   - Select the Security Protocol WPA3 from the drop-down list.
    - Select an existing RADIUS Server from the drop-down list or add a new RADIUS Server by clicking "Add Server" and configuring it.
 7. Click "Next" to move to the Venues page.
 8. Configure the venues in which you want to activate this network.

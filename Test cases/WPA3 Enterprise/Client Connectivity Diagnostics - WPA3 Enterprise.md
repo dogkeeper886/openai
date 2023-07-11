@@ -1,31 +1,31 @@
-Test Case: Client Connectivity Diagnostics - WPA3 SAE
+Test Case: Client Connectivity Diagnostics - WPA3 Enterprise
 
 Summary:
-This test case focuses on verifying the functionality of the Client Connectivity Diagnostics tool in the context of a WPA3 SAE network. The test ensures that the tool correctly diagnoses and troubleshoots connectivity issues for wireless clients attempting to connect to the network.
+This test case focuses on Client Connectivity Diagnostics for a WPA3 Enterprise network. The test verifies the functionality of the Client Connectivity Diagnostics tool by following the steps provided. It includes validating input fields, initiating connectivity trace, observing the flow diagram, and ensuring accurate representation of the connection status. The expected results involve the tool correctly displaying relevant information, analyzing frames, identifying connection problems, and providing accurate troubleshooting details.
 
 Preconditions:
-1. Active WPA3 SAE network
+1. Active WPA3 Enterprise network
 2. Wi-Fi access point
 3. Wireless client
+4. Authentication server
 
-Here's a step-by-step guide to creating a WPA3 SAE WLAN network:
+Here are the step-by-step instructions to create a WPA3 Enterprise network:
 1. On the navigation bar, click Wi-Fi > Wi-Fi Networks > Wi-Fi Networks List.
-2. The Networks page will be displayed.
-3. Click "Add Wi-Fi Network" or select a PSK network setting to clone from the table.
-4. The Create New Network page will be displayed.
-5. In the Network Details tab, complete the following settings:
-   - Network Name: Enter a name (up to 32 characters) for the network.
-   - Network Type: Select "Pre-Shared Key (PSK)".
-6. Click "Next".
-7. The PSK Settings tab will be displayed.
-8. Complete the settings on the PSK Settings tab:
-   - SAE Passphrase: Enter a minimum eight-character passphrase for users to access the network.
-   - Security Protocol: Select "WPA3" as the security protocol.
-9. Click "Next" to move to the Venues page.
-10. Configure the venues in which you want to activate this network.
-11. Click "Next" to move to the Summary page.
-12. Review the settings on the Summary page.
-13. Click "Finish" to complete the process.
+2. The Networks page will be displayed. Click "Add Wi-Fi Network".
+3. The "Create New Network" page will be displayed.
+4. Complete the Network Details settings:
+   - Enter a name (up to 32 characters) for the network.
+   - Select "Enterprise AAA (802.1X)" as the Network Type.
+   - Click "Next" to proceed.
+5. The "Enterprise AAA (802.1X) Settings" page will be displayed.
+6. Complete the settings on the Enterprise AAA (802.1X) Settings page:
+   - Select the Security Protocol WPA3 from the drop-down list.
+   - Select an existing RADIUS Server from the drop-down list or add a new RADIUS Server by clicking "Add Server" and configuring it.
+7. Click "Next" to move to the Venues page.
+8. Configure the venues in which you want to activate this network.
+9. Click "Next" to move to the Summary page.
+10. Review the settings on the Summary page.
+11. Click "Finish" to complete the process.
 
 Test Steps:
 1. Open the WEB GUI and navigate to the Client Connectivity Diagnostics tool.
