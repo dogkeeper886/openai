@@ -1,29 +1,31 @@
-Test Case: Client Connectivity Diagnostics - DPSK
+Test Case: Client Connectivity Diagnostics - Captive Portal
 
 Summary:
-The test case focuses on the Client Connectivity Diagnostics tool with a specific emphasis on Dynamic Pre-Shared Key (DPSK) networks. The preconditions involve the presence of an active DPSK network, a compatible Wi-Fi access point configured with DPSK, and a wireless client device capable of DPSK authentication. The test steps include accessing the tool, entering the client's MAC address, selecting an access point, initiating the connectivity trace, and verifying the displayed information. The expected results encompass successful tool access, the presence of relevant input fields, accurate representation of AP-client connection stages, appropriate highlighting of warnings and failures, and the provision of pertinent information for diagnosing and troubleshooting client connectivity issues. The test case ensures the effectiveness of the Client Connectivity Diagnostics tool in the context of DPSK networks.
+The test case focuses on the Client Connectivity Diagnostics tool in the context of a Captive Portal network using click-through authentication. The preconditions require an active Captive Portal network with click-through, a Wi-Fi access point, and a wireless client device. The test steps include accessing the tool, entering the client's MAC address, selecting an access point, initiating the connectivity trace, and verifying the displayed information. The expected results encompass successful tool access, the presence of relevant input fields, accurate representation of AP-client connection stages, appropriate highlighting of warnings and failures, and the provision of pertinent information for diagnosing and troubleshooting client connectivity issues. The test case ensures the effectiveness of the Client Connectivity Diagnostics tool in a Captive Portal network with click-through authentication.
 
 Preconditions:
-1. Active DPSK network
+1. Active Captive Portal network with click-through
 2. Wi-Fi access point
 3. Wireless client
 
-Here's a step-by-step guide to creating a DPSK WLAN network:
-1. On the navigation bar, click on "Wi-Fi" and then "Wi-Fi Networks" followed by "Wi-Fi Networks List".
-2. Click on "Add Wi-Fi Network".
-3. In the Network Details page, complete the following settings:
-   - Network Name: Enter a name (up to 32 characters) for the network.
-   - Network Type: Select "Dynamic Pre-Shared Key (DPSK)".
-4. Click "Next" to proceed to the DPSK Settings page.
-5. In the DPSK Settings page, complete the following settings:
-   - Security Protocol: Select "WPA" or "WPA2(recommended)" from the drop-down list.
-   - Use the DPSK Service: Enable this option and select an existing DPSK service from the drop-down list, or click "Add DPSK Service" to configure a new one.
-   - Use the RADIUS Server: Enable this option and configure the RADIUS Server by selecting an existing server from the drop-down list or clicking "Add Server" to create a new one.
-6. Click "Next" to proceed to the Venues page.
-7. In the Venues page, select the venues in which you want to activate the network. You can activate the network in all venues or specific ones by setting the switch to ON.
-8. Click "Apply" to save the settings.
-9. Review the settings on the Summary page and make sure everything is configured correctly.
-10. Finally, click "Finish" to create the DPSK-protected network.
+Here's a step-by-step guide for creating a network that uses a captive portal with click-through:
+1. Navigate to the Wi-Fi section in the navigation menu and select "Wi-Fi Networks" and then "Wi-Fi Networks List."
+2. On the Networks page, click "Add Wi-Fi Network" to create a new network.
+3. Complete the Network Details page:
+   - Enter a Network Name (up to 32 characters).
+   - Select "Captive Portal" as the Network Type.
+4. Click "Next" to proceed to the Portal Type page.
+5. On the Portal Type page, select "Click-Through" as the option.
+6. Click "Next" to move to the Onboarding page.
+7. Click "Next" to move to the Portal Web Page page.
+8. Click "Next" to proceed to the Portal Web Page settings.
+9. Complete the Portal Web Page settings:
+   - Select a Guest Portal from the dropdown list or create a new one.
+10. Click "Next" to move to the Venues page.
+11. Configure the venues in which you want to activate this network.
+12. Click "Next" to move to the Summary page.
+13. Review the settings on the Summary page.
+14. Click "Finish" to complete the process.
 
 Test Steps:
 1. Open the WEB GUI and navigate to the Client Connectivity Diagnostics tool.

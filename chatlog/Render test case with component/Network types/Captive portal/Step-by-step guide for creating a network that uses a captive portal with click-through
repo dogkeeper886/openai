@@ -1,0 +1,19 @@
+Here's a step-by-step guide for creating a network that uses a captive portal with click-through:
+
+1. Navigate to the Wi-Fi section in the navigation menu and select "Wi-Fi Networks" and then "Wi-Fi Networks List."
+2. On the Networks page, click "Add Wi-Fi Network" to create a new network.
+3. Complete the Network Details page:
+   - Enter a Network Name (up to 32 characters).
+   - Select "Captive Portal" as the Network Type.
+4. Click "Next" to proceed to the Portal Type page.
+5. On the Portal Type page, select "Click-Through" as the option.
+6. Click "Next" to move to the Onboarding page.
+7. Click "Next" to move to the Portal Web Page page.
+8. Click "Next" to proceed to the Portal Web Page settings.
+9. Complete the Portal Web Page settings:
+   - Select a Guest Portal from the dropdown list or create a new one.
+10. Click "Next" to move to the Venues page.
+11. Configure the venues in which you want to activate this network.
+12. Click "Next" to move to the Summary page.
+13. Review the settings on the Summary page.
+14. Click "Finish" to complete the process.
